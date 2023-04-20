@@ -1,0 +1,16 @@
+{
+    "projects" : {
+        "Python GiveawayBot" : {
+            "description" : "A Discord bot that allows users to create giveaways and enter them. Slash commands only. Uses the disnake library.",
+            "url" : "https://github.com/d4vss/python-giveawaybot"
+        },
+        "stick.exe" : {
+            "description" : "Fibonacci sequence calculator. Calculates fibonacci sequence for ever, or until the PC crashes.",
+            "url" : "https://github.com/d4vss/stick"
+        },
+        "Random static pages" : {
+            "description" : "A collection of random static pages I made for fun. I mainly use this to test out new things. The pages are hosted on GitHub Pages and mostly made with Plain HTML, CSS and JavaScript.",
+            "url" : "https://d4vss.github.io"
+        }
+    }
+}
