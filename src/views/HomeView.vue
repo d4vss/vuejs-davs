@@ -15,6 +15,12 @@
 /* Rotate Animation */
 
 @keyframes rotate {
+  25%, 35%, 40%, 50% {
+    scale: 1;
+  }
+  30%, 45% {
+    scale: 1.03;
+  }
   85% {
     transform: rotate(0deg);
   }
@@ -29,7 +35,7 @@
   user-select: none;
   border-radius: 999px;
   width: fit-content;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
   box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.3);
 }
 .circle {
@@ -50,17 +56,23 @@
 /* Text */
 
 .quote {
-  margin-top: 300px;
+  margin-top: 400px;
 }
 
 /* Media Queries */
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
+  .quote {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 1300px) {
   .wrap {
     margin-bottom: 50px;
   }
   .quote {
-    margin-top: 200px;
+    margin-top: 100px;
   }
 }
 </style>

@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
+import GitHub from './views/icons/GitHub.vue';
+import Spotify from './views/icons/Spotify.vue';
+import Steam from './views/icons/Steam.vue';
 </script>
 
 <template>
@@ -13,7 +16,9 @@ import { RouterLink, RouterView } from 'vue-router';
             <RouterLink to="/about">About</RouterLink>
           </nav>
           <div class="socials">
-            
+            <a target=_blank href="https://github.com/d4vss"><GitHub /></a>
+            <a target=_blank href="https://open.spotify.com/user/dsrmybymxe5nv86bajh5z72r8"><Spotify /></a>
+            <a target=_blank href="https://steamcommunity.com/id/d4vss/"><Steam /></a>
           </div>
         </div>
       </header>
@@ -32,7 +37,7 @@ import { RouterLink, RouterView } from 'vue-router';
 <style scoped>
 /* Transitions */
 .page-slide-enter-active, .page-slide-leave-active {
-  transition: transform .3s ease;
+  transition: transform .35s ease;
 }
 
 .page-slide-leave-to {
@@ -79,6 +84,20 @@ nav a:first-of-type {
   border: 0;
 }
 
+/* Socials */
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.socials a:hover {
+  transition: all .5s ease;
+  filter: brightness(2);
+}
+
 /* Page layout */
 
 .page {
@@ -110,7 +129,18 @@ nav a:first-of-type {
 
 /* Media queries */
 
+@media (max-width: 1400px) {
+  .page {
+    min-height: 92vh;
+  }
+}
+
 @media (max-width: 450px){
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
   nav {
     display: inline;
   }
