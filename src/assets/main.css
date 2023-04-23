@@ -7,7 +7,7 @@
 }
 
 a {
-  color: var(--color-accent);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -19,4 +19,10 @@ a {
 .page-title {
   font-size: 25px;
   margin: 50px 0 65px 0;
+}
+
+.page-text {
+  line-height: 1.6;
+  font-size: 22px;
+  font-weight: 300;
 }

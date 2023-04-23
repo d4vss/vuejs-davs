@@ -1,16 +1,33 @@
 {
     "projects" : {
-        "Python GiveawayBot" : {
+        "0" : {
+            "name" : "Python Giveaway Bot",
             "description" : "A Discord bot that allows users to create giveaways and enter them. Slash commands only. Uses the disnake library.",
-            "url" : "https://github.com/d4vss/python-giveawaybot"
+            "url" : "https://github.com/d4vss/python-giveawaybot",
+            "index" : 0,
+            "tags" : {
+                "1" : "Python",
+                "2" : "Discord",
+                "3" : "Disnake"
+            }
         },
-        "stick.exe" : {
+        "1" : {
+            "name" : "stick.exe",
             "description" : "Fibonacci sequence calculator. Calculates fibonacci sequence for ever, or until the PC crashes.",
-            "url" : "https://github.com/d4vss/stick"
+            "url" : "https://github.com/d4vss/stick",
+            "tags" : {
+                "1" : "Go!",
+                "2" : "Application"
+            }
         },
-        "Random static pages" : {
-            "description" : "A collection of random static pages I made for fun. I mainly use this to test out new things. The pages are hosted on GitHub Pages and mostly made with Plain HTML, CSS and JavaScript.",
-            "url" : "https://d4vss.github.io"
+        "2" : {
+            "name" : "Discord Profile",
+            "description" : "An static editable discord drofile page.",
+            "url" : "https://d4vss.github.io/discord-profile",
+            "tags" : {
+                "1" : "HTML/CSS",
+                "2" : "Editable"
+            }
         }
     }
 }

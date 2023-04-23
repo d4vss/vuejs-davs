@@ -1,21 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-addEventListener('load', () => {
-    const funMode = document.getElementById('fun-mode');
-    funMode.addEventListener('change', () => {
-      if (funMode.checked) {
-        document.documentElement.style.setProperty('--animation', '1.5s');
-        document.documentElement.style.setProperty('--logo-zoom', '5');
-        document.documentElement.style.setProperty('--project-card', 'column-reverse');
-        document.documentElement.style.setProperty('--menu-items', 'row-reverse');
-      } else {
-        document.documentElement.style.setProperty('--animation', '0');
-        document.documentElement.style.setProperty('--logo-zoom', '1');
-        document.documentElement.style.setProperty('--project-card', 'column');
-        document.documentElement.style.setProperty('--menu-items', 'row');
-      }
-    })
-})
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
@@ -23,37 +7,41 @@ addEventListener('load', () => {
     <div class="content-wrap">
       <header>
         <div class="wrapper">
-          <div class="logo">
-            <RouterLink to="/"><img src="/favicon.png" alt="Home"></RouterLink>
-          </div>
-          <nav class="menu-items">
+          <nav>
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/projects">Pwojects</RouterLink>
-            <RouterLink to="/about">about OwO</RouterLink>
+            <RouterLink to="/projects">Projects</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
           </nav>
+          <div class="socials">
+            
+          </div>
         </div>
       </header>
     
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="page-slide" mode="out-in">
+        <Component :is="Component" />
+      </Transition>
+    </RouterView>
     </div>
 
-    <footer class="footer">
-      <span>Toggwe f-fun mode: <input id="fun-mode" type="checkbox"></span>
-      I'm a smaww, w-wittwe footew (・`ω´・)</footer>
+    <footer class="footer">Made with <a target=_blank href="https://vuejs.org/">Vue.js</a>.</footer>
   </div>
 </template>
 
 <style scoped>
-@keyframes e {
-  0% {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
-  50% {
-    transform: rotate3d(0, 1, 0, 180deg);
-  }
-  100% {
-    transform: rotate3d(0, 0, 0, 0deg);
-  }
+/* Transitions */
+.page-slide-enter-active, .page-slide-leave-active {
+  transition: transform .3s ease;
+}
+
+.page-slide-leave-to {
+  transform: translateX(-100%);
+}
+
+.page-slide-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
 }
 
 .wrapper {
@@ -64,26 +52,7 @@ addEventListener('load', () => {
   margin: 40px;
 }
 
-.logo {
-  padding: 3px;
-}
-
-.logo img {
-  width: 75px;
-  padding: 5px;
-  filter: brightness(0.5);	
-  transition: all .2s ease;
-
-  animation-name: e;
-  animation-duration: var(--animation);
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-}
-
-.logo img:hover {
-  filter: none;
-  scale: var(--logo-zoom);	
-}
+/* Navbar */
 
 nav {
   display: flex;
@@ -94,51 +63,52 @@ nav {
   flex-direction: row;
 }
 
-nav:hover {
-  flex-direction: var(--menu-items);
-}
-
 nav a.router-link-exact-active, nav a:hover {
-  color: var(--color-accent);
+  color: white;
 }
 
 nav a {
   display: inline-block;
-  color: var(--color-text);
   padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-primary);
   transition: all .2s ease;
+  color: var(--color-primary);
 }
 
 nav a:first-of-type {
   border: 0;
 }
 
-.content{
-  margin-inline: 10px;
-}
+/* Page layout */
 
 .page {
   position: relative;
-  min-height: 90vh;
+  min-height: 95vh;
 }
 
 .content-wrap {
   padding-bottom: 4rem; 
 }
 
+.footer a {
+  text-decoration: underline;
+}
+
 .footer {
   text-align: center;
   position: absolute;
   bottom: 0;
+  font-size: 18px;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 3rem; 
 }
 
 .footer span {
   display: block;
   margin-bottom: 5px;
 }
+
+/* Media queries */
 
 @media (max-width: 450px){
   nav {
