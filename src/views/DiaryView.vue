@@ -27,6 +27,7 @@ import Days from '../assets/days.json'
     max-width: 50%;
     padding-bottom: 25px;
     margin: 0 auto;
+    text-align: justify;
 }
 .day-title {
     margin-block: 20px;
