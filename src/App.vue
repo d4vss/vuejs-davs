@@ -23,11 +23,11 @@ import Steam from './views/icons/Steam.vue';
         </div>
       </header>
     
-    <RouterView v-slot="{ Component }">
-      <Transition name="page-slide" mode="out-in">
-        <Component :is="Component" />
-      </Transition>
-    </RouterView>
+      <RouterView v-slot="{ Component }">
+        <Transition name="page-slide" mode="out-in">
+          <Component :is="Component" />
+        </Transition>
+      </RouterView>
     </div>
 
     <footer class="footer">Made with <a target=_blank href="https://vuejs.org/">Vue.js</a>.</footer>

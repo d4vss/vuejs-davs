@@ -1,14 +1,14 @@
 {
     "projects" : {
         "0" : {
+            "name" : "My Website",
+            "description" : "Built with Vue.js. This website is a portfolio of my projects and skills. I'm also using this website to learn Vue.js.",
+            "url" : "https://github.com/d4vss/davs.lol"
+        },
+        "1" : {
             "name" : "Python Giveaway Bot",
             "description" : "A Discord bot that allows users to create giveaways and enter them. Slash commands only. Uses the disnake library.",
             "url" : "https://github.com/d4vss/python-giveawaybot"
-        },
-        "1" : {
-            "name" : "stick.exe",
-            "description" : "Fibonacci sequence calculator. Calculates fibonacci sequence for ever, or until the PC crashes.",
-            "url" : "https://github.com/d4vss/stick"
         },
         "2" : {
             "name" : "Discord Profile",
