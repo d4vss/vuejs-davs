@@ -64,6 +64,8 @@
 
 .card .open {
     padding: 10px 5px;
+    font-weight: 600;
+    color: var(--color-secondary);
     background-color: var(--color-accent);
     text-align: center;
     text-decoration: none;

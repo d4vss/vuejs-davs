@@ -1,8 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
-import GitHub from './views/icons/GitHub.vue';
-import Spotify from './views/icons/Spotify.vue';
-import Steam from './views/icons/Steam.vue';
+import Socials from './components/Socials.vue';
+import Footer from './components/FooterBlock.vue';
 </script>
 
 <template>
@@ -15,11 +14,7 @@ import Steam from './views/icons/Steam.vue';
             <RouterLink to="/projects">Projects</RouterLink>
             <RouterLink to="/about">About</RouterLink>
           </nav>
-          <div class="socials">
-            <a target=_blank href="https://github.com/d4vss"><GitHub /></a>
-            <a target=_blank href="https://open.spotify.com/user/dsrmybymxe5nv86bajh5z72r8"><Spotify /></a>
-            <a target=_blank href="https://steamcommunity.com/id/d4vss/"><Steam /></a>
-          </div>
+          <Socials/>
         </div>
       </header>
     
@@ -30,7 +25,7 @@ import Steam from './views/icons/Steam.vue';
       </RouterView>
     </div>
 
-    <footer class="footer">Made with <a target=_blank href="https://vuejs.org/">Vue.js</a>.</footer>
+    <Footer/>
   </div>
 </template>
 
@@ -84,20 +79,6 @@ nav a:first-of-type {
   border: 0;
 }
 
-/* Socials */
-
-.socials {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 7.5px;
-}
-
-.socials a:hover {
-  transition: all .5s ease;
-  filter: brightness(2);
-}
-
 /* Page layout */
 
 .page {
@@ -106,25 +87,7 @@ nav a:first-of-type {
 }
 
 .content-wrap {
-  padding-bottom: 4rem; 
-}
-
-.footer a {
-  text-decoration: underline;
-}
-
-.footer {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  font-size: 18px;
-  width: 100%;
-  height: 3rem; 
-}
-
-.footer span {
-  display: block;
-  margin-bottom: 5px;
+  padding-bottom: 2rem; 
 }
 
 /* Media queries */

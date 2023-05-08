@@ -6,7 +6,6 @@
       </div>
     </div>
     <h1>DAVS.LOL</h1>
-    <p class="page-text quote">"Wenn's dir ned passt, da oben ist der X-Button" ~Rainer Winkler</p>
   </div>
 </template>
 
@@ -53,26 +52,11 @@
   aspect-ratio: 1/1;
 }
 
-/* Text */
-
-.quote {
-  margin-top: 400px;
-}
-
 /* Media Queries */
-
-@media (max-width: 1500px) {
-  .quote {
-    margin-top: 300px;
-  }
-}
 
 @media (max-width: 1300px) {
   .wrap {
     margin-bottom: 50px;
-  }
-  .quote {
-    margin-top: 100px;
   }
 }
 </style>
