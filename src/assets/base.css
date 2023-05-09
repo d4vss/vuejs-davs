@@ -1,7 +1,13 @@
 :root {
   --color-primary: #ddd;
-  --color-accent: rgb(132, 173, 235);
+  --color-accent: #fff;
   --color-secondary: rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-accent: #222;
+  }
 }
 
 *,
