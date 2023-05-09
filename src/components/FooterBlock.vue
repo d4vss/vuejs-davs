@@ -1,5 +1,5 @@
 <script setup>
-const colors = {'accent-blue' : 'rgb(132, 173, 235)', 'accent-gray' : '#2f2f2f', 'accent-red' : '#e67e7e'}
+const colors = {'accent-blue' : '#9CA6D9', 'accent-gray' : '#5a5a5c', 'accent-purple' : '#9d86cf'}
 </script>
 
 <template>
@@ -26,7 +26,6 @@ const colors = {'accent-blue' : 'rgb(132, 173, 235)', 'accent-gray' : '#2f2f2f',
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  animation: slidein .5s ease-in-out alternate;
 }
 
 .colors div {
@@ -34,12 +33,12 @@ const colors = {'accent-blue' : 'rgb(132, 173, 235)', 'accent-gray' : '#2f2f2f',
   width: 32px;
   height: 32px;
   border-radius: 7.5px;
-  transition: all .25s ease;
+  transition: all .15s ease;
   border: #ddd 2px solid;
 }
 
 .colors div:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 </style>
