@@ -83,7 +83,7 @@ nav a:first-of-type {
 
 .page {
   position: relative;
-  min-height: 95vh;
+  min-height: 92vh;
 }
 
 .content-wrap {
