@@ -42,12 +42,12 @@
 }
 
 .card {
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(255, 255, 255, 0.15);
     color: #000;
     padding: 25px;
     width: 300px;
     min-height: 280px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -63,20 +63,19 @@
 }
 
 .card .open {
-    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 50px;
     font-weight: 600;
     color: var(--color-secondary);
-    background-color: var(--color-accent);
     text-align: center;
     text-decoration: none;
     margin-top: 10px;
-    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.8);
-    transition: all .3s ease;
+    transition: all .1s ease;
+    border: var(--color-secondary) solid 1px;
 }
 
 .card .open:hover {
-    scale: 1.01;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, 0.8);
 }
 
 .card .splitter {

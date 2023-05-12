@@ -18,6 +18,7 @@ a {
 }
 
 .page-title {
+  color: var(--color-primary);
   font-size: 25px;
   margin: 50px 0 65px 0;
 }

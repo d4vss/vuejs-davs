@@ -28,6 +28,10 @@
   }
 }
 
+h1 {
+  color: var(--color-primary);
+}
+
 /* Logo */
 
 .wrap {
