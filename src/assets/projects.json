@@ -3,7 +3,7 @@
         "0" : {
             "name" : "My Website",
             "description" : "Built with Vue.js. This website is a portfolio of my projects and skills. I'm also using this website to learn Vue.js.",
-            "url" : "https://github.com/d4vss/davs.lol"
+            "url" : "https://github.com/d4vss/vuejs-davs"
         },
         "1" : {
             "name" : "Python Giveaway Bot",

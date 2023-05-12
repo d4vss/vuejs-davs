@@ -83,11 +83,11 @@ nav a:first-of-type {
 
 .page {
   position: relative;
-  min-height: 92vh;
+  min-height: 90vh;
 }
 
 .content-wrap {
-  padding-bottom: 2rem; 
+  padding-bottom: 6rem; 
 }
 
 /* Media queries */
