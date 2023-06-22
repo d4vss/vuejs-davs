@@ -5,7 +5,7 @@
         <img src="/favicon.png" draggable="false">
       </div>
     </div>
-    <h1>DAVS.LOL</h1>
+    <h1>d4vss</h1>
   </div>
 </template>
 
