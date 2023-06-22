@@ -10,6 +10,7 @@ import Footer from './components/FooterBlock.vue';
       <header>
         <div class="wrapper">
           <nav>
+            <RouterLink to="/"><img src="/favicon.png"></RouterLink>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/projects">Projects</RouterLink>
             <RouterLink to="/about">About</RouterLink>
@@ -63,16 +64,36 @@ nav {
   flex-direction: row;
 }
 
+nav a img {
+  display: none;
+  width: 50px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+  margin-top: -10px;
+  transition: all .2s ease;
+}
+
+nav a img:hover {
+  scale: 1.1;
+}
+
 nav a.router-link-exact-active, nav a:hover {
   color: white;
 }
 
 nav a {
+  height: fit-content;
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-primary);
   transition: all .2s ease;
   color: var(--color-primary);
+}
+
+@media (min-width: 600px) {
+  nav a img {
+    display: inline;
+  }
 }
 
 nav a:first-of-type {
